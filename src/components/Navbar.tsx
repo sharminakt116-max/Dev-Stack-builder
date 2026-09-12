@@ -4,6 +4,7 @@ import Logo from '../assets/logo-text.png';
 const Navbar= () => {
     return (
          <div className=" py-4 border-b border-gray-300">
+        
         <div className=" flex justify-between gap-4 max-w-7xl mx-auto ">
             <img src={Logo} alt="" />
 
