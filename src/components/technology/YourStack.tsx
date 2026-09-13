@@ -12,7 +12,7 @@ const YourStack = ({
   onRemoveAll,
 }: YourStackProps) => {
   return (
-  <aside className="w-full lg:w-80 shrink-0 self-start h-full lg:sticky lg:top-24 lg:mt-[120px]">
+    <aside className="w-full lg:w-80 shrink-0 self-start h-full lg:sticky lg:top-24 lg:mt-[120px]">
       <div className="bg-white border border-gray-300 rounded-3xl p-6 shadow-sm">
 
         {/* Title */}
@@ -20,7 +20,7 @@ const YourStack = ({
           Your Stack
         </h2>
 
-        {/* Dynamic text */}
+        {/* Dynamic Text */}
         <p className="text-slate-400 text-xs mb-6">
           {selectedStack.length === 0
             ? "No technologies selected yet."
@@ -46,7 +46,7 @@ const YourStack = ({
                   key={technology.id}
                   className="flex items-center justify-between gap-3 p-3 border border-gray-100 rounded-xl"
                 >
-                  {/* Technology info */}
+                  {/* Technology Info */}
                   <div className="flex items-center gap-3">
                     <img
                       src={technology.icon}
@@ -65,23 +65,18 @@ const YourStack = ({
                     </div>
                   </div>
 
-                  {/* Cross */}
+                  {/* Remove Button */}
                   <button
                     onClick={() => onRemoveFromStack(technology.id)}
-                    className="text-red-500 hover:text-red-700 text-lg font-bold"
-                  >
-                    ×
-                  </button>
+                    className="text-red-500 hover:text-red-700 text-lg font-bold"> ×</button>
                 </div>
               ))}
 
               {/* Remove All Button */}
               <button
                 onClick={onRemoveAll}
-                className="w-full py-3 rounded-xl bg-pink-400 text-white text-xs font-bold hover:bg-gray-800 transition"
-              >
-                Remove All
-              </button>
+                className="gradient-button w-full py-3 rounded-xl text-white text-xs font-bold hover:opacity-90 transition">
+                  Remove All</button>
             </div>
           )}
         </div>

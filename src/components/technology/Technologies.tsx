@@ -15,12 +15,12 @@ const Technologies = ({
   const technology = use(technologyPromise);
 
   return (
-<section className="max-w-7xl mx-auto">
+    <section className="max-w-7xl mx-auto">
       {/* Title */}
       <div className="mb-7">
         <h1 className="text-4xl font-bold text-gray-900">
           Explore the{" "}
-          <span className="text-pink-500">Technologies</span>
+          <span className="gradient-text">Technologies</span>
         </h1>
 
         <p className="text-gray-400 text-2xl mt-1">
@@ -29,9 +29,7 @@ const Technologies = ({
       </div>
 
       {/* Cards */}
-     <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 py-6 gap-6">
-   
-
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 py-6 gap-6">
         {technology.map((item) => {
           const isSelected = selectedStack.some(
             (tech) => tech.id === item.id
@@ -46,10 +44,8 @@ const Technologies = ({
                   : "bg-white border-gray-300 hover:shadow-md"
               }`}
             >
-
               {/* Icon & Badge */}
               <div className="flex justify-between items-start mb-6">
-
                 <img
                   src={item.icon}
                   alt={item.name}
@@ -59,7 +55,6 @@ const Technologies = ({
                 <span className="px-4 py-1.5 text-xs font-semibold rounded-full bg-pink-50 text-pink-500">
                   {item.badge}
                 </span>
-
               </div>
 
               {/* Name */}
@@ -74,7 +69,6 @@ const Technologies = ({
 
               {/* Category, Difficulty & Rating */}
               <div className="flex items-center justify-between text-xs text-slate-500 mb-6">
-
                 <span className="bg-slate-100 text-slate-600 px-3 py-3 rounded-md font-medium">
                   {item.category}
                 </span>
@@ -84,31 +78,31 @@ const Technologies = ({
                 </span>
 
                 <span className="flex items-center gap-1 font-bold text-slate-800">
-                  <span className="text-amber-400 text-lg">
-                    ★
-                  </span>
+                  <span className="text-amber-400 text-lg">★</span>
                   {item.rating}
                 </span>
-
               </div>
 
               {/* Add Button */}
-              <button
+              {/* <button
                 onClick={() => onAddToStack(item)}
-                disabled={isSelected}
                 className={`w-full py-4 rounded-xl text-xs font-bold transition ${
                   isSelected
-                    ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                    ? "bg-gray-300 text-gray-500"
                     : "bg-black text-white hover:bg-gray-800"
                 }`}
               >
                 {isSelected ? "Added to Stack" : "Add to Stack"}
-              </button>
+              </button> */}
+      <button
+  onClick={() => onAddToStack(item)}disabled={isSelected} className={`w-full py-4 rounded-xl text-xs font-bold transition 
+    ${ isSelected ? "bg-gray-300 text-gray-500 cursor-not-allowed": "bg-black text-white hover:bg-gray-800"}`}>
 
+  {isSelected ? "✓ Added to Stack" : "Add to Stack"}
+</button>
             </div>
           );
         })}
-
       </div>
     </section>
   );
