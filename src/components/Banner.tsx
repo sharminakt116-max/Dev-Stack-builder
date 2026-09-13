@@ -34,7 +34,7 @@ const Banner = () => {
       </div>
 
       {/* Right Image */}
-      <div className="w-full md:w-4/10 flex justify-center">
+      <div className="w-full md:w-2/5 flex justify-center">
         <img src={Image} alt="Development Stack Illustration"
         />
       </div>
