@@ -12,7 +12,7 @@ const YourStack = ({
   onRemoveAll,
 }: YourStackProps) => {
   return (
-   <aside className="w-full lg:w-80 shrink-0 self-start h-fit">
+  <aside className="w-full lg:w-80 shrink-0 self-start h-full lg:sticky lg:top-24 lg:mt-[120px]">
       <div className="bg-white border border-gray-300 rounded-3xl p-6 shadow-sm">
 
         {/* Title */}

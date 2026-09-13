@@ -5,6 +5,7 @@ import Banner from "./components/Banner";
 import Navbar from "./components/Navbar";
 import Technologies from "./components/technology/Technologies";
 import YourStack from "./components/technology/YourStack";
+import Footer from "./components/Footer";
 
 const technologyFetch = async (): Promise<Itechnology[]> => {
   const res = await fetch("/data.json");
@@ -72,6 +73,7 @@ function App() {
         />
 
       </main>
+      <Footer/>
 
     </div>
   );
