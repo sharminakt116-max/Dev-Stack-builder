@@ -83,19 +83,7 @@ const Technologies = ({
                 </span>
               </div>
 
-              {/* Add Button */}
-              {/* <button
-                onClick={() => onAddToStack(item)}
-                className={`w-full py-4 rounded-xl text-xs font-bold transition ${
-                  isSelected
-                    ? "bg-gray-300 text-gray-500"
-                    : "bg-black text-white hover:bg-gray-800"
-                }`}
-              >
-                {isSelected ? "Added to Stack" : "Add to Stack"}
-              </button> */}
-      <button
-  onClick={() => onAddToStack(item)}disabled={isSelected} className={`w-full py-4 rounded-xl text-xs font-bold transition 
+      <button onClick={() => onAddToStack(item)}disabled={isSelected} className={`w-full py-4 rounded-xl text-xs font-bold transition 
     ${ isSelected ? "bg-gray-300 text-gray-500 cursor-not-allowed": "bg-black text-white hover:bg-gray-800"}`}>
 
   {isSelected ? "✓ Added to Stack" : "Add to Stack"}
