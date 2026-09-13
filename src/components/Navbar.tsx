@@ -40,22 +40,16 @@ const Navbar = () => {
       <div className="hidden md:flex justify-between items-center gap-4 max-w-7xl mx-auto">
 
         {/* Logo */}
-        <img
-          src={Logo}
-          alt="Dev Stack"
-          className="h-8"
-        />
+        <img src={Logo} alt="Dev Stack" className="h-8"/>
 
         {/* Navigation */}
         <ul className="flex gap-6 py-2">
           <li>
-            <a href="/" className="gradient-text font-semibold">
-              Home
-            </a>
-          </li>
+            <a href="/" className="gradient-text font-semibold"> Home </a>
+            </li>
 
           <li>
-            <a href="/">Technologies</a>
+           <a href="/">Technologies</a>
           </li>
 
           <li>

@@ -1,75 +1,49 @@
-# React + TypeScript + Vite
+Project Name: Dev Stack Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dev Stack is a responsive React website where users can explore different technologies and create their own stack. Users can add, remove, or clear technologies from their stack.
 
-Currently, two official plugins are available:
+Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+React
+-TypeScript
+-Tailwind CSS
+-DaisyUI
+-React Toastify
+-Vite
+-JSON
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Features
 
-## Expanding the ESLint configuration
+-Explore different technologies with their category, difficulty, rating, description, and icon.
+-Add technologies to the stack and remove them individually or all at once.
+-Responsive design for mobile, tablet, and desktop devices.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. What is JSX, and why is it used in React?
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+-JSX is a way to write HTML-like code in JavaScript. It helps us create the UI in React easily.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. What is the difference between props and state?
 
-```
+-Props are data passed from a parent to a child. State is data that a component can store and change.
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+3. What does useState do, and where did you use it?
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+-useState is used to store and update data. I used it in App.tsx to store the selected technologies.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+4. What does useEffect do, and why did you need it?
 
-```
+-useEffect is used for tasks like fetching data. But I did not use it in this project. I used fetch(), Suspense, and use() to load the JSON data.
+
+5. Why does .map() need a unique key?
+
+-A unique key helps React identify each item in a list and update it correctly.
+
+6. What is conditional rendering?
+
+-Conditional rendering means showing different content based on a condition. I used it for the empty stack. If the stack is empty, it shows “Your stack is empty.”
+
+7. How do parent and child components share data?
+
+-A parent sends data to a child using props. The child can send information back by calling a function passed through props.
