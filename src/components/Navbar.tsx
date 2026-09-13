@@ -20,12 +20,7 @@ const Navbar = () => {
         </button>
 
        
-        <img
-          src={Logo}
-          alt="Dev Stack"
-          className="hidden md:block h-8"
-        />
-
+        <img src={Logo} alt="Dev Stack"className="h-8"/>
    
         <ul className="hidden md:flex gap-6 py-2">
           <li>
